@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import * as pdfjsLib from 'pdfjs-dist'
+
+import pdfjsLib from 'pdfjs-dist'
 
 @Component({
   selector: 'page-home',
@@ -12,6 +13,7 @@ export class HomePage {
     var loadingTask = pdfjsLib.getDocument('assets/example.pdf');
     loadingTask.promise.then(function(pdf) {
       console.log('PDF loaded');
+      pdfjsLib.workerSrc = 'assets/pdf.worker.js';
 
       // Fetch the first page
       var pageNumber = 1;
