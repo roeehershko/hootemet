@@ -18,8 +18,6 @@ export class HomePage {
       pdf.getPage(pageNumber).then(function(page) {
         console.log('Page loaded');
 
-        var scale = 1.5;
-
         // Prepare canvas using PDF page dimensions
         var canvas = <HTMLCanvasElement> document.getElementById('the-canvas');
         var viewport = page.getViewport(canvas.width / page.getViewport(1.0).width);
