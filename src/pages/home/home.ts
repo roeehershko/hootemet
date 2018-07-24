@@ -17,6 +17,6 @@ export class HomePage{
       title: 'My PDF'
     };
 
-    this.document.viewDocument('assets/example.pdf', 'application/pdf', options)
+    this.document.viewDocument('http://www.pdf995.com/samples/pdf.pdf', 'application/pdf', options)
   }
 }
